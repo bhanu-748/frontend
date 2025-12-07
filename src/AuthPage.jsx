@@ -43,6 +43,7 @@ function AuthPage() {
       setLoading(false);
       return;
     }
+
     
     try {
       const response = await fetch(`${API_BASE_URL}/login`, {
@@ -56,6 +57,7 @@ function AuthPage() {
         }),
       });
 
+      
       const data = await response.json();
 
       if (!response.ok) {
